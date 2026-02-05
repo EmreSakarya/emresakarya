@@ -32,13 +32,13 @@ I bridge the gap between theoretical physics and software to solve complex engin
 * Developed a generic **Implicit Euler Solver in Fortran** to ensure numerical stability where explicit methods (Python) fail.
 * Demonstrated proficiency in **High-Performance Computing (HPC)** logic used in legacy nuclear codes.
 
-#### ⚙️ [Combined Cycle Power Plant Optimization](LINK_KOYACAGIZ)
+#### ⚙️ [Combined Cycle Power Plant Optimization](https://github.com/EmreSakarya/combined-cycle-analysis)
 > **Keywords:** *Python, Thermodynamics, SciPy, Optimization*
 * Modeled a Gas-Steam Combined Cycle (Brayton + Rankine) using **Variable Specific Heat** assumptions for realistic gas behavior.
 * Implemented iterative solvers (`fsolve`) to optimize compression ratios, achieving a peak efficiency of **50.1%**.
 * Analyzed pinch-point constraints in heat exchangers.
 
-#### 🌊 [Thermal-Hydraulic Analysis (HEM)](LINK_KOYACAGIZ)
+#### 🌊 [Thermal-Hydraulic Analysis (HEM)](https://github.com/EmreSakarya/vertical-pipe-flow-analysis)
 > **Keywords:** *Python, Finite Volume Method, Two-Phase Flow*
 * Developed a **1D Numerical Solver** for downward water flow subjected to constant heat flux.
 * Utilized the **Homogeneous Equilibrium Model (HEM)** and IAPWS-97 standards to predict boiling inception and void fraction profiles.
