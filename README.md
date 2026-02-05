@@ -20,7 +20,7 @@ I bridge the gap between theoretical physics and software to solve complex engin
 
 ### 🚀 Top Featured Projects
 
-#### 📈 [Point Reactor Kinetics Analysis](LINK_KOYACAGIZ)
+#### 📈 [Point Reactor Kinetics Analysis](https://github.com/EmreSakarya/point-reactor-kinetics-analysis)
 > **Keywords:** *Python, Runge-Kutta (RK4), Heun's Method, Stiff Systems*
 * Solved point reactor kinetics equations with **delayed neutrons** to analyze transient behavior under reactivity insertions.
 * Implemented **Runge-Kutta (RK4)** and **Heun's Predictor-Corrector** methods for high-precision numerical integration.
