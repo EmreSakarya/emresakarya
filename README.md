@@ -26,7 +26,7 @@ I bridge the gap between theoretical physics and software to solve complex engin
 * Implemented **Runge-Kutta (RK4)** and **Heun's Predictor-Corrector** methods for high-precision numerical integration.
 * Conducted stiffness ratio analysis to evaluate numerical stability against analytical solutions.
 
-#### ☢️ [U-238 Decay Chain Modeling](LINK_KOYACAGIZ)
+#### ☢️ [U-238 Decay Chain Modeling](https://github.com/EmreSakarya/uranium-decay-chain-analysis)
 > **Keywords:** *Fortran 90, Implicit Euler, Stiff Differential Equations*
 * Solved a 14-stage decay chain (U-238 to Pb-206) containing **stiff systems** with half-lives ranging from $10^9$ years to seconds.
 * Developed a generic **Implicit Euler Solver in Fortran** to ensure numerical stability where explicit methods (Python) fail.
