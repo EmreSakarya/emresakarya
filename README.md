@@ -47,17 +47,17 @@ I bridge the gap between theoretical physics and software to solve complex engin
 
 ### 📂 Other Engineering Simulations
 
-#### ⚛️ [Stochastic Neutron Transport Simulation](LINK_KOYACAGIZ)
+#### ⚛️ [Stochastic Neutron Transport Simulation](https://github.com/EmreSakarya/neutron-transport-monte-carlo)
 * **Focus:** *Monte Carlo Method, Statistical Analysis*
 * Developed a stochastic algorithm from scratch to model neutron trajectories in slab geometry.
 * Validated results against analytical **Exponential Integral** functions and demonstrated $1/\sqrt{N}$ error scaling.
 
-#### ⚡ [Charged Particle Energy Loss Simulation](LINK_KOYACAGIZ)
+#### ⚡ [Charged Particle Energy Loss Simulation](https://github.com/EmreSakarya/bethe-bloch-analysis)
 * **Focus:** *Bethe-Bloch Formula, Adaptive Step-Size*
 * Modeled energy deposition of Protons and Alpha particles in water/hydrogen media.
 * Simulated **phase transition effects** on stopping power using adaptive numerical integration.
 
-#### 🏭 [Regenerative Rankine Cycle Analysis](LINK_KOYACAGIZ)
+#### 🏭 [Regenerative Rankine Cycle Analysis](https://github.com/EmreSakarya/regenerative-rankine-cycle)
 * **Focus:** *Thermodynamics, Reheat, OFWH*
 * Analyzed the trade-offs between turbine inlet temperature and steam quality using IAPWS-97 standards.
 * Integrated logic for thermodynamic efficiency improvements.
