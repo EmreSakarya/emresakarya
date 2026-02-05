@@ -2,7 +2,7 @@
 
 ### Nuclear Engineering @Hacettepe University| Reactor Physics, Thermal-Hydraulics & Scientific Computing | Python, Fortran
 
-I'm a senior **Nuclear Engineering** student passionate about **Computational Engineering**, **Simulation**, and **Numerical Analysis**. 
+I'm a senior **Nuclear Engineering** student passionate about **Computational Engineering**, **Simulation**, and **Numerical Analysis**. 
 I bridge the gap between theoretical physics and software to solve complex engineering problems, ranging from reactor kinetics to thermodynamic cycle optimization.
 
 ---
@@ -66,6 +66,6 @@ I bridge the gap between theoretical physics and software to solve complex engin
 
 ### 📫 Connect with Me
 <p align="left">
-<a href="SENIN_LINKEDIN_ADRESIN" target="blank"><img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="emresakarya" /></a>
-<a href="mailto:SENIN_MAIL_ADRESIN" target="blank"><img align="center" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email" /></a>
+<a href="https://www.linkedin.com/in/emre-sakarya-ab8967300/" target="blank"><img align="center" src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="emresakarya" /></a>
+<a href="mailto:emresakarya@hacettepe.edu.tr" target="blank"><img align="center" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email" /></a>
 </p>
