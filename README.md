@@ -1,6 +1,6 @@
 # Hi there, I'm Emre! 👋
 
-### Nuclear Engineering @Hacettepe University| Reactor Physics, Thermal-Hydraulics & Scientific Computing | Python, Fortran
+### Nuclear Engineering @Hacettepe University | Reactor Physics, Thermal-Hydraulics & Scientific Computing | Python, Fortran
 
 I'm a senior **Nuclear Engineering** student passionate about **Computational Engineering**, **Simulation**, and **Numerical Analysis**. 
 I bridge the gap between theoretical physics and software to solve complex engineering problems, ranging from reactor kinetics to thermodynamic cycle optimization.
@@ -13,8 +13,9 @@ I bridge the gap between theoretical physics and software to solve complex engin
 | :--- | :--- | :--- |
 | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) **(Advanced)** | ⚛️ Point Reactor Kinetics | 🧮 NumPy, SciPy, Pandas |
 | ![Fortran](https://img.shields.io/badge/Fortran-734F96?style=flat&logo=fortran&logoColor=white) **(Intel ifx, gfortran – scientific computing)** | 🎲 Monte Carlo Methods | 📊 Matplotlib |
-| ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white) **(Learning)** | 🌊 Finite Volume Method (FVM) | 💨 PyXSteam (IAPWS-97) |
-| | 📐 Numerical Optimization | 🐧 Linux / Bash |
+| ![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white) **(Learning)** | 🌊 Computational Fluid Dynamics (CFD – Navier–Stokes, Turbulence Modeling) | 💨 PyXSteam (IAPWS-97) |
+| | 🌊 Finite Volume Method (FVM) | 🐧 Linux / Bash |
+| | 📐 Numerical Optimization | |
 
 ---
 
