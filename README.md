@@ -45,6 +45,15 @@ I bridge the gap between theoretical physics and software to solve complex engin
 
 ---
 
+#### 🌡️ [2D Transient Thermal Analysis of a Rectangular Plate](https://github.com/EmreSakarya/2d-transient-thermal-analysis)
+> **Keywords:** *Python, Control Volume FDM, Explicit Euler, Transient Heat Transfer, Natural Convection*
+* Solved a two-stage heat treatment problem for a 6×16 cm rectangular plate on a 3×5 nodal grid using the **Control Volume Finite Difference Method (CVFDM)**.
+* **Heating Phase:** Applied variable volumetric heat sources (28–37 kW/m³) at four corner nodes under adiabatic boundaries; all nodes exceeded **1000 K** in ~28.6 seconds (simulated ~8 hours).
+* **Cooling Phase:** Immersed the plate in a liquid metal bath with temperature-dependent **natural convection** (Ra-based correlations); all nodes cooled below **600 K** in ~1920 seconds.
+* Updated temperature-dependent solid and fluid properties (k, ρ, cₚ) at every time step for realistic nonlinear behavior.
+
+---
+
 ### 📂 Other Engineering Simulations
 
 #### ⚛️ [iPWR Startup Transient Analysis](https://github.com/EmreSakarya/iPWR-Reactor-Simulation-Analysis)
