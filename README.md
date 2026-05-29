@@ -65,85 +65,88 @@ I bridge the gap between theoretical physics and software to solve complex engin
 
 ---
 
-## 🚀 Top Featured Projects
+## 🌊 CFD Simulations · ANSYS Fluent & Star-CCM+
 
-#### 📈 [Point Reactor Kinetics Analysis](https://github.com/EmreSakarya/point-reactor-kinetics-analysis)
-> **Keywords:** *Python, Runge-Kutta (RK4), Heun's Method, Stiff Systems*
-* Solved point reactor kinetics equations with **delayed neutrons** to analyze transient behavior under reactivity insertions.
-* Implemented **Runge-Kutta (RK4)** and **Heun's Predictor-Corrector** methods for high-precision numerical integration.
-* Conducted stiffness ratio analysis to evaluate numerical stability against analytical solutions.
+> Industrial-grade computational fluid dynamics projects (NEM 358), cross-validated between two commercial solvers and analytical correlations.
 
-#### ☢️ [U-238 Decay Chain Modeling](https://github.com/EmreSakarya/uranium-decay-chain-analysis)
-> **Keywords:** *Fortran 90, Implicit Euler, Stiff Differential Equations*
-* Solved a 14-stage decay chain (U-238 to Pb-206) containing **stiff systems** with half-lives ranging from $10^9$ years to seconds.
-* Developed a generic **Implicit Euler Solver in Fortran** to ensure numerical stability where explicit methods (Python) fail.
-* Demonstrated proficiency in **High-Performance Computing (HPC)** logic used in legacy nuclear codes.
-
-#### ⚙️ [Combined Cycle Power Plant Optimization](https://github.com/EmreSakarya/combined-cycle-analysis)
-> **Keywords:** *Python, Thermodynamics, SciPy, Optimization*
-* Modeled a Gas-Steam Combined Cycle (Brayton + Rankine) using **Variable Specific Heat** assumptions for realistic gas behavior.
-* Implemented iterative solvers (`fsolve`) to optimize compression ratios, achieving a peak efficiency of **50.1%**.
-* Analyzed pinch-point constraints in heat exchangers.
-
-#### 🌊 [Thermal-Hydraulic Analysis (HEM)](https://github.com/EmreSakarya/vertical-pipe-flow-analysis)
-> **Keywords:** *Python, Finite Volume Method, Two-Phase Flow*
-* Developed a **1D Numerical Solver** for downward water flow subjected to constant heat flux.
-* Utilized the **Homogeneous Equilibrium Model (HEM)** and IAPWS-97 standards to predict boiling inception and void fraction profiles.
-
-#### 🌡️ [2D Transient Thermal Analysis of a Rectangular Plate](https://github.com/EmreSakarya/2d-transient-thermal-analysis)
-> **Keywords:** *Python, Control Volume FDM, Explicit Euler, Transient Heat Transfer, Natural Convection*
-* Solved a two-stage heat treatment problem for a 6×16 cm rectangular plate on a 3×5 nodal grid using the **Control Volume Finite Difference Method (CVFDM)**.
-* **Heating Phase:** Applied variable volumetric heat sources (28–37 kW/m³) at four corner nodes under adiabatic boundaries; all nodes exceeded **1000 K** in ~28.6 seconds (simulated ~8 hours).
-* **Cooling Phase:** Immersed the plate in a liquid metal bath with temperature-dependent **natural convection** (Ra-based correlations); all nodes cooled below **600 K** in ~1920 seconds.
-
----
-
-## 🌊 CFD Simulations — NEM 358 (ANSYS Fluent & Star-CCM+)
-
-#### 🔥 [Steady-State Heat Conduction in a TRISO Particle](https://github.com/EmreSakarya/triso-heat-conduction-cfd)
-> **Keywords:** *Star-CCM+, CFD, Spherical Conduction, Mesh Independence, UO₂*
-* Modeled steady-state heat conduction in a 5-layer **TRISO fuel particle** (kernel → buffer → IPyC → SiC → OPyC) with a volumetric heat source of **2 GW/m³** in the UO₂ kernel.
-* Performed a **3D CFD analysis in Star-CCM+** using polyhedral meshes at three density levels (Coarse/Medium/Fine); validated against a 1D analytical solution (T_max = **1106.35 K**).
-* Achieved mesh independence with a maximum relative error of **< 0.0084%** across all mesh levels.
-* Extended the model with **temperature-dependent UO₂ thermal conductivity** and quantified the resulting shift in peak temperature.
+#### ⚛️ [CFD Simulation of a 3×3 PWR Rod Bundle](https://github.com/EmreSakarya/pwr-rod-bundle-cfd)
+> **Keywords:** *ANSYS Fluent, Star-CCM+, Conjugate Heat Transfer, k-ω SST, Rod Bundle, PWR*
+* Performed a full **conjugate heat transfer (CHT)** simulation of a 3×3 PWR fuel rod bundle with a central guide tube (D_NFR = 12.243 mm), using parameters from a typical 4-loop PWR at 15.51 MPa.
+* Applied a **non-uniform radial power distribution** (corner rods 0.85×, edge rods 1.00×) with volumetric heat sources up to **2.51×10⁸ W/m³**.
+* ANSYS Fluent used 1/4-symmetry; Star-CCM+ solved the full geometry — cross-validated against analytical correlations (Petukhov friction factor, Dittus-Boelter Nusselt).
+* Simultaneously resolved 3D velocity, temperature, and pressure fields across all subchannels.
 
 #### 💧 [Flow Analysis in a PWR Fuel Rod Subchannel](https://github.com/EmreSakarya/pwr-subchannel-flow-cfd)
 > **Keywords:** *ANSYS Fluent, Star-CCM+, Turbulent Flow, Darcy-Weisbach, RANS, k-ε, k-ω SST*
 * Simulated turbulent coolant flow in a **3.66 m bare-rod PWR subchannel** (D = 9.5 mm, pitch = 12.6 mm, D_h = 11.78 mm) using two independent CFD codes.
-* Applied **realizable k-ε** (Star-CCM+) and **k-ω SST** (ANSYS Fluent) turbulence models; compared pressure drop results against the **Darcy-Weisbach / Filonenko** analytical solution.
-* Analyzed axial pressure profiles, inlet velocity distributions, and the hydrodynamic entrance region.
-* Cross-validated ANSYS Fluent (~873 k cells) and Star-CCM+ (~920 k cells) results — both codes converged to within ~1% of each other and of the analytical reference.
+* Applied **realizable k-ε** (Star-CCM+) and **k-ω SST** (ANSYS Fluent) closures; benchmarked the pressure drop against the **Darcy-Weisbach / Filonenko** analytical solution.
+* Cross-validated ANSYS Fluent (~873 k cells) and Star-CCM+ (~920 k cells) — both converged to within **~1%** of each other and of the analytical reference.
 
-#### ⚛️ [CFD Simulation of a 3×3 PWR Rod Bundle](https://github.com/EmreSakarya/pwr-rod-bundle-cfd)
-> **Keywords:** *ANSYS Fluent, Star-CCM+, Conjugate Heat Transfer, k-ω SST, Rod Bundle, PWR*
-* Performed a full **conjugate heat transfer CFD simulation** of a 3×3 PWR fuel rod bundle with a non-fuel central guide tube (D_NFR = 12.243 mm), using parameters from a typical 4-loop PWR at 15.51 MPa.
-* Applied a **non-uniform radial power distribution** (corner rods: 0.85×, edge rods: 1.00×) with volumetric heat sources up to **2.51×10⁸ W/m³**.
-* ANSYS Fluent used 1/4-symmetry (1 subchannel); Star-CCM+ solved the full 3×3 geometry — results cross-validated against analytical correlations (Petukhov friction factor, Dittus-Boelter Nusselt).
-* Simultaneously resolved 3D velocity, temperature, and pressure fields within all subchannels.
+#### 🔥 [Steady-State Heat Conduction in a TRISO Particle](https://github.com/EmreSakarya/triso-heat-conduction-cfd)
+> **Keywords:** *Star-CCM+, CFD, Spherical Conduction, Mesh Independence, UO₂*
+* Modeled steady-state conduction in a 5-layer **TRISO fuel particle** (kernel → buffer → IPyC → SiC → OPyC) with a **2 GW/m³** source in the UO₂ kernel.
+* Validated a 3D Star-CCM+ model against a 1D analytical solution (T_max = **1106.35 K**) through a rigorous mesh-independence study (max error **< 0.0084%**).
+* Extended the model with **temperature-dependent UO₂ conductivity** k(T) and quantified the resulting peak-temperature shift.
 
 ---
 
-## 📂 Other Engineering Simulations
+## 🔬 Numerical Methods & Heat Transfer · Python / Fortran
 
-#### ⚛️ [iPWR Startup Transient Analysis](https://github.com/EmreSakarya/iPWR-Reactor-Simulation-Analysis)
-* **Focus:** *IAEA Simulator, Reactivity Management, Transient Analysis*
-* Analyzed a controlled power ascension from 0% to 100% using the **IAEA iPWR Simulator**.
-* Specifically analyzed the **Start-Up Rate (SUR)** fluctuations and verified safety margins against SCRAM setpoints.
+> Solvers built from scratch for non-linear, stiff, and multi-physics heat-transfer problems.
 
-#### ⚛️ [Stochastic Neutron Transport Simulation](https://github.com/EmreSakarya/neutron-transport-monte-carlo)
-* **Focus:** *Monte Carlo Method, Statistical Analysis*
-* Developed a stochastic algorithm from scratch to model neutron trajectories in slab geometry.
-* Validated results against analytical **Exponential Integral** functions and demonstrated $1/\sqrt{N}$ error scaling.
+#### 🌡️ [2D Transient Thermal Analysis of a Rectangular Plate](https://github.com/EmreSakarya/2d-transient-thermal-analysis)
+> **Keywords:** *Python, Control Volume FDM, Explicit Euler, Natural Convection*
+* Solved a two-stage heat-treatment problem on a 3×5 nodal grid using the **Control Volume Finite Difference Method (CVFDM)** with temperature-dependent properties updated every step.
+* **Heating:** variable corner heat sources (28–37 kW/m³) under adiabatic boundaries → all nodes exceed **1000 K**.
+* **Cooling:** liquid-metal bath with Ra-based **natural convection** → all nodes drop below **600 K** (~1920 s).
+
+#### 📈 [Point Reactor Kinetics Analysis](https://github.com/EmreSakarya/point-reactor-kinetics-analysis)
+> **Keywords:** *Python, Runge-Kutta (RK4), Heun's Method, Stiff Systems*
+* Solved the point reactor kinetics equations with **delayed neutrons** to analyze transient behavior under reactivity insertions.
+* Implemented **RK4** and **Heun's Predictor-Corrector** integrators; conducted stiffness-ratio analysis against analytical solutions.
+
+#### ☢️ [U-238 Decay Chain Modeling](https://github.com/EmreSakarya/uranium-decay-chain-analysis)
+> **Keywords:** *Fortran 90, Implicit Euler, Stiff Differential Equations*
+* Solved a 14-stage decay chain (U-238 → Pb-206) with half-lives spanning $10^9$ years to seconds — a severely **stiff system**.
+* Developed a generic **Implicit Euler solver in Fortran** for stability where explicit methods fail, mirroring legacy HPC nuclear-code logic.
+
+#### 🌊 [Thermal-Hydraulic Analysis (HEM)](https://github.com/EmreSakarya/vertical-pipe-flow-analysis)
+> **Keywords:** *Python, Finite Volume Method, Two-Phase Flow*
+* Built a **1D numerical solver** for downward water flow under constant heat flux.
+* Used the **Homogeneous Equilibrium Model (HEM)** and IAPWS-97 standards to predict boiling inception and void-fraction profiles.
+
+---
+
+## ⚛️ Monte Carlo & Particle Transport
+
+#### 🎲 [Stochastic Neutron Transport Simulation](https://github.com/EmreSakarya/neutron-transport-monte-carlo)
+> **Keywords:** *Monte Carlo Method, Statistical Analysis, Slab Geometry*
+* Developed a stochastic neutron-trajectory algorithm from scratch in slab geometry.
+* Validated against analytical **Exponential Integral** functions and demonstrated $1/\sqrt{N}$ error scaling.
 
 #### ⚡ [Charged Particle Energy Loss Simulation](https://github.com/EmreSakarya/bethe-bloch-analysis)
-* **Focus:** *Bethe-Bloch Formula, Adaptive Step-Size*
-* Modeled energy deposition of Protons and Alpha particles in water/hydrogen media.
-* Simulated **phase transition effects** on stopping power using adaptive numerical integration.
+> **Keywords:** *Bethe-Bloch Formula, Adaptive Step-Size Integration*
+* Modeled energy deposition of protons and alpha particles in water / hydrogen media.
+* Simulated **phase-transition effects** on stopping power using adaptive numerical integration.
 
-#### 🏭 [Regenerative Rankine Cycle Analysis](https://github.com/EmreSakarya/regenerative-rankine-cycle)
-* **Focus:** *Thermodynamics, Reheat, OFWH*
+---
+
+## ⚙️ Thermodynamic Cycles & Reactor Systems
+
+#### 🏭 [Combined Cycle Power Plant Optimization](https://github.com/EmreSakarya/combined-cycle-analysis)
+> **Keywords:** *Python, Thermodynamics, SciPy, Optimization*
+* Modeled a Gas-Steam Combined Cycle (Brayton + Rankine) with **variable specific heat** for realistic gas behavior.
+* Optimized compression ratios via iterative solvers (`fsolve`), reaching a peak efficiency of **50.1%**; analyzed heat-exchanger pinch points.
+
+#### ♻️ [Regenerative Rankine Cycle Analysis](https://github.com/EmreSakarya/regenerative-rankine-cycle)
+> **Keywords:** *Thermodynamics, Reheat, OFWH, IAPWS-97*
 * Analyzed trade-offs between turbine inlet temperature and steam quality using IAPWS-97 standards.
-* Integrated logic for thermodynamic efficiency improvements.
+* Integrated reheat and open feedwater heating logic for thermodynamic efficiency gains.
+
+#### 🛰️ [iPWR Startup Transient Analysis](https://github.com/EmreSakarya/iPWR-Reactor-Simulation-Analysis)
+> **Keywords:** *IAEA Simulator, Reactivity Management, Transient Analysis*
+* Analyzed a controlled power ascension from 0% to 100% using the **IAEA iPWR Simulator**.
+* Studied **Start-Up Rate (SUR)** fluctuations and verified safety margins against SCRAM setpoints.
 
 ---
 
