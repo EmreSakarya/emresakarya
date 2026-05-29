@@ -57,9 +57,9 @@ I bridge the gap between theoretical physics and software to solve complex engin
 
 <div align="center">
 
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=EmreSakarya&show_icons=true&theme=github_dark&hide_border=true&title_color=C0392B&icon_color=C0392B)](https://github.com/EmreSakarya)
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=emresakarya&show_icons=true&theme=github_dark&hide_border=true&title_color=C0392B&icon_color=C0392B&count_private=true)](https://github.com/EmreSakarya)
 &nbsp;&nbsp;
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=EmreSakarya&layout=compact&theme=github_dark&hide_border=true&title_color=C0392B)](https://github.com/EmreSakarya)
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=emresakarya&layout=compact&theme=github_dark&hide_border=true&title_color=C0392B&count_private=true)](https://github.com/EmreSakarya)
 
 </div>
 
