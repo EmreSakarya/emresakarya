@@ -45,7 +45,7 @@ I bridge the gap between theoretical physics and software to solve complex engin
 
 ---
 
-#### 🌡️ [2D Transient Thermal Analysis of a Rectangular Plate](https://github.com/EmreSakarya/emresakarya/tree/main/2d-transient-thermal-analysis)
+#### 🌡️ [2D Transient Thermal Analysis of a Rectangular Plate](https://github.com/EmreSakarya/2d-transient-thermal-analysis)
 > **Keywords:** *Python, Control Volume FDM, Explicit Euler, Transient Heat Transfer, Natural Convection*
 * Solved a two-stage heat treatment problem for a 6×16 cm rectangular plate on a 3×5 nodal grid using the **Control Volume Finite Difference Method (CVFDM)**.
 * **Heating Phase:** Applied variable volumetric heat sources (28–37 kW/m³) at four corner nodes under adiabatic boundaries; all nodes exceeded **1000 K** in ~28.6 seconds (simulated ~8 hours).
