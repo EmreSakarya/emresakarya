@@ -29,6 +29,10 @@ program iaea3d_pwr
     !
     ! Build:  ifx -O3 -qopenmp iaea3d_pwr.f90 -o iaea3d
     !    or:  gfortran -O3 -fopenmp iaea3d_pwr.f90 -o iaea3d
+    !
+    ! Run:    ./iaea3d            benchmark config (4 full rods + 80 cm partial)
+    !         ./iaea3d aro        all rods out
+    !         ./iaea3d ari        all rods fully inserted
     !==========================================================================
     implicit none
     integer, parameter :: dp = selected_real_kind(15)
@@ -70,10 +74,11 @@ program iaea3d_pwr
     real(dp), allocatable :: q(:,:,:), fis(:,:,:), fisold(:,:,:)
 
     real(dp) :: keff, keff_old, fsum, fsum_new, err_src, scale, fmax
-    real(dp) :: zc, pw(9,9), pnorm
+    real(dp) :: zc, pw(9,9), pnorm, z_rod
     integer  :: npw(9,9)
     integer  :: i, j, k, it, m, row, col, nfuel
     logical  :: rodpos(9,9)
+    character(len=32) :: rodcase
 
     ! assembly band boundaries along x and y [cm]
     real(dp), parameter :: bnd(0:9) = &
@@ -94,9 +99,30 @@ program iaea3d_pwr
     rodpos(5,1) = .true.; rodpos(5,5) = .true.
     rodpos(3,3) = .true.            ! partially inserted rod
 
+    ! rod configuration from command line:
+    !   'benchmark' (default) = 4 full rods + partial rod over z = 280-360
+    !   'aro' = all rods out, 'ari' = all rods fully inserted
+    call get_command_argument(1, rodcase)
+    if (len_trim(rodcase) == 0) rodcase = 'benchmark'
+    select case (trim(rodcase))
+    case ('benchmark')
+        z_rod = 280.0_dp              ! (3,3) rodded only in the top 80 cm
+    case ('ari')
+        z_rod = 20.0_dp               ! (3,3) rodded over the whole core height
+    case ('aro')
+        z_rod = 1.0e9_dp              ! (3,3) never rodded
+        where (map9 == 3) map9 = 2    ! remove the 4 fully inserted rods too
+        rodpos = .false.              ! plain reflector everywhere on top
+    case default
+        print '(3a)', ' unknown rod case "', trim(rodcase), &
+                      '" (use: benchmark | aro | ari)'
+        stop 1
+    end select
+
     print '(a)', '====================================================='
     print '(a)', ' IAEA 3D PWR Benchmark - two-group finite differences'
     print '(a,f6.3,a,i4,a,i4,a,i4)', ' h =', h, ' cm,  grid ', NXc, ' x', NYc, ' x', NZc
+    print '(2a)', ' rod configuration: ', trim(rodcase)
     print '(a)', '====================================================='
 
     !--------------------------------------------------------------------
@@ -119,11 +145,8 @@ program iaea3d_pwr
                     else;                      m = 4
                     end if
                 else
-                    if (row == 3 .and. col == 3) then   ! partial rod assembly
-                        if (zc > 280.0_dp) then; m = 3  ! rodded upper 80 cm
-                        else;                    m = 2
-                        end if
-                    end if
+                    ! rod assembly (3,3): rodded above z_rod (case dependent)
+                    if (row == 3 .and. col == 3 .and. zc > z_rod) m = 3
                 end if
                 mat(i,j,k) = m
             end do
@@ -276,8 +299,11 @@ program iaea3d_pwr
     end do
 
     print '(a)', '====================================================='
-    print '(a,f10.6,a,i5,a)', ' FINAL:  keff =', keff, '   (', it, ' outer iterations)'
-    print '(a,f10.6)', ' reference keff = 1.029030  ->  diff [pcm] =', (keff-1.02903_dp)*1.0e5_dp
+    print '(4a)', ' FINAL (', trim(rodcase), '):'
+    print '(a,f10.6,a,i5,a)', '   keff =', keff, '   (', it, ' outer iterations)'
+    if (trim(rodcase) == 'benchmark') &
+        print '(a,f10.6)', '   reference keff = 1.029030  ->  diff [pcm] =', &
+                           (keff-1.02903_dp)*1.0e5_dp
     print '(a)', '====================================================='
 
     ! assembly-averaged radial power map (axially integrated, normalized)
