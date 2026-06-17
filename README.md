@@ -132,6 +132,17 @@ Point reactor kinetics with delayed neutrons under reactivity insertions. Implem
 
 </td>
 </tr>
+<tr>
+<td width="50%" valign="top">
+
+#### ⚛️ [IAEA-3D PWR Benchmark · Neutron Diffusion Solver](https://github.com/EmreSakarya/iaea-3d-pwr-benchmark)
+`Fortran` `OpenMP` `Finite Difference` `Eigenvalue` `Red-Black SOR`
+
+From-scratch two-group neutron diffusion solver for the 3-D IAEA PWR core benchmark (ANL-7416). Mesh-centered FDM with harmonic-mean interface coefficients, Robin vacuum BCs, and power iteration + red-black SOR. Reproduces the reference **k_eff = 1.02903** to within **−7.9 pcm** and matches the 1977 VENTURE mesh-convergence sequence.
+
+</td>
+<td width="50%" valign="top"></td>
+</tr>
 </table>
 
 ---
