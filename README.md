@@ -85,7 +85,14 @@ Turbulent coolant flow in a 3.66 m bare-rod subchannel (D_h = 11.78 mm). Two ind
 3D Star-CCM+ model of a 5-layer TRISO fuel particle (2 GW/m³ source) validated against a 1D analytical solution (T_max = **1106.35 K**). Mesh error < **0.0084%** across all refinement levels.
 
 </td>
-<td width="50%" valign="top"></td>
+<td width="50%" valign="top">
+
+#### 🌀 [Single-Phase CFD of a VVER-1200 Rod Bundle](https://github.com/EmreSakarya/vver-1200-rod-bundle-cfd)
+`Star-CCM+` `Conjugate Heat Transfer` `SST k-ω γ-Reθ` `Hexagonal Bundle`
+
+Conjugate heat transfer simulation of a 19-rod (18 fuel + guide tube) **VVER-1200** hexagonal mini-bundle over the bottom 1/10 of the core with a sinusoidal axial power source (~1.8M cells). CFD matched analytical references to **0.18%** on peak fuel temperature, **1.9%** on coolant ΔT, and **8.1%** on pressure drop.
+
+</td>
 </tr>
 </table>
 
@@ -131,6 +138,17 @@ Point reactor kinetics with delayed neutrons under reactivity insertions. Implem
 14-stage decay chain (U-238 → Pb-206) with half-lives spanning 10⁹ years to seconds — a severely **stiff system**. Generic Implicit Euler solver in Fortran, mirroring legacy HPC nuclear-code logic.
 
 </td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### ⚛️ [IAEA-3D PWR Benchmark · Neutron Diffusion Solver](https://github.com/EmreSakarya/iaea-3d-pwr-benchmark)
+`Fortran` `OpenMP` `Finite Difference` `Eigenvalue` `Red-Black SOR`
+
+From-scratch two-group neutron diffusion solver for the 3-D IAEA PWR core benchmark (ANL-7416). Mesh-centered FDM with harmonic-mean interface coefficients, Robin vacuum BCs, and power iteration + red-black SOR. Reproduces the reference **k_eff = 1.02903** to within **−7.9 pcm** and matches the 1977 VENTURE mesh-convergence sequence.
+
+</td>
+<td width="50%" valign="top"></td>
 </tr>
 </table>
 
