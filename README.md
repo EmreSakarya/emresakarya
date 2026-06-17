@@ -24,7 +24,8 @@ I bridge the gap between theoretical physics and software to solve complex engin
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) Advanced\
 ![Fortran](https://img.shields.io/badge/Fortran-734F96?style=flat&logo=fortran&logoColor=white) Intel ifx / gfortran\
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white) Learning
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white) Intermediate\
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=black) Intermediate
 
 </td>
 <td valign="top" width="33%">
@@ -61,12 +62,22 @@ I bridge the gap between theoretical physics and software to solve complex engin
 <tr>
 <td width="50%" valign="top">
 
+#### 🌀 [Single-Phase CFD of a VVER-1200 Rod Bundle](https://github.com/EmreSakarya/vver-1200-rod-bundle-cfd)
+`Star-CCM+` `Conjugate Heat Transfer` `SST k-ω γ-Reθ` `Hexagonal Bundle`
+
+Conjugate heat transfer simulation of a 19-rod (18 fuel + guide tube) **VVER-1200** hexagonal mini-bundle over the bottom 1/10 of the core with a sinusoidal axial power source (~1.8M cells). CFD matched analytical references to **0.18%** on peak fuel temperature, **1.9%** on coolant ΔT, and **8.1%** on pressure drop.
+
+</td>
+<td width="50%" valign="top">
+
 #### ⚛️ [CFD Simulation of a 3×3 PWR Rod Bundle](https://github.com/EmreSakarya/pwr-rod-bundle-cfd)
 `ANSYS Fluent` `Star-CCM+` `Conjugate Heat Transfer` `k-ω SST`
 
 Full conjugate heat transfer simulation of a 3×3 PWR fuel rod bundle. Applied a **non-uniform radial power distribution** (up to 2.51×10⁸ W/m³) and cross-validated ANSYS Fluent (1/4-symmetry) against Star-CCM+ (full geometry) and analytical correlations (Petukhov, Dittus-Boelter).
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 #### 💧 [Flow Analysis in a PWR Fuel Rod Subchannel](https://github.com/EmreSakarya/pwr-subchannel-flow-cfd)
@@ -75,22 +86,12 @@ Full conjugate heat transfer simulation of a 3×3 PWR fuel rod bundle. Applied a
 Turbulent coolant flow in a 3.66 m bare-rod subchannel (D_h = 11.78 mm). Two independent CFD codes converged to within **~1%** of each other and of the Darcy-Weisbach / Filonenko analytical reference.
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 #### 🔥 [Steady-State Heat Conduction in a TRISO Particle](https://github.com/EmreSakarya/triso-heat-conduction-cfd)
 `Star-CCM+` `Spherical Conduction` `Mesh Independence`
 
 3D Star-CCM+ model of a 5-layer TRISO fuel particle (2 GW/m³ source) validated against a 1D analytical solution (T_max = **1106.35 K**). Mesh error < **0.0084%** across all refinement levels.
-
-</td>
-<td width="50%" valign="top">
-
-#### 🌀 [Single-Phase CFD of a VVER-1200 Rod Bundle](https://github.com/EmreSakarya/vver-1200-rod-bundle-cfd)
-`Star-CCM+` `Conjugate Heat Transfer` `SST k-ω γ-Reθ` `Hexagonal Bundle`
-
-Conjugate heat transfer simulation of a 19-rod (18 fuel + guide tube) **VVER-1200** hexagonal mini-bundle over the bottom 1/10 of the core with a sinusoidal axial power source (~1.8M cells). CFD matched analytical references to **0.18%** on peak fuel temperature, **1.9%** on coolant ΔT, and **8.1%** on pressure drop.
 
 </td>
 </tr>
@@ -103,6 +104,24 @@ Conjugate heat transfer simulation of a 19-rod (18 fuel + guide tube) **VVER-120
 > Solvers built from scratch for non-linear, stiff, and multi-physics heat-transfer problems.
 
 <table>
+<tr>
+<td width="50%" valign="top">
+
+#### ⚛️ [IAEA-3D PWR Benchmark · Neutron Diffusion Solver](https://github.com/EmreSakarya/iaea-3d-pwr-benchmark)
+`Fortran` `OpenMP` `Finite Difference` `Eigenvalue` `Red-Black SOR`
+
+From-scratch two-group neutron diffusion solver for the 3-D IAEA PWR core benchmark (ANL-7416). Mesh-centered FDM with harmonic-mean interface coefficients, Robin vacuum BCs, and power iteration + red-black SOR. Reproduces the reference **k_eff = 1.02903** to within **−7.9 pcm** and matches the 1977 VENTURE mesh-convergence sequence.
+
+</td>
+<td width="50%" valign="top">
+
+#### ☢️ [U-238 Decay Chain Modeling](https://github.com/EmreSakarya/uranium-decay-chain-analysis)
+`Fortran 90` `Implicit Euler` `Stiff ODEs`
+
+14-stage decay chain (U-238 → Pb-206) with half-lives spanning 10⁹ years to seconds — a severely **stiff system**. Generic Implicit Euler solver in Fortran, mirroring legacy HPC nuclear-code logic.
+
+</td>
+</tr>
 <tr>
 <td width="50%" valign="top">
 
@@ -128,24 +147,6 @@ Point reactor kinetics with delayed neutrons under reactivity insertions. Implem
 `Python` `Finite Volume Method` `Two-Phase Flow` `IAPWS-97`
 
 1D solver for downward water flow under constant heat flux using the **Homogeneous Equilibrium Model**. Predicts boiling inception and void-fraction profiles with IAPWS-97 steam tables.
-
-</td>
-<td width="50%" valign="top">
-
-#### ☢️ [U-238 Decay Chain Modeling](https://github.com/EmreSakarya/uranium-decay-chain-analysis)
-`Fortran 90` `Implicit Euler` `Stiff ODEs`
-
-14-stage decay chain (U-238 → Pb-206) with half-lives spanning 10⁹ years to seconds — a severely **stiff system**. Generic Implicit Euler solver in Fortran, mirroring legacy HPC nuclear-code logic.
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-#### ⚛️ [IAEA-3D PWR Benchmark · Neutron Diffusion Solver](https://github.com/EmreSakarya/iaea-3d-pwr-benchmark)
-`Fortran` `OpenMP` `Finite Difference` `Eigenvalue` `Red-Black SOR`
-
-From-scratch two-group neutron diffusion solver for the 3-D IAEA PWR core benchmark (ANL-7416). Mesh-centered FDM with harmonic-mean interface coefficients, Robin vacuum BCs, and power iteration + red-black SOR. Reproduces the reference **k_eff = 1.02903** to within **−7.9 pcm** and matches the 1977 VENTURE mesh-convergence sequence.
 
 </td>
 <td width="50%" valign="top"></td>
