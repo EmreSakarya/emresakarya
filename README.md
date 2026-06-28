@@ -53,51 +53,6 @@ I bridge the gap between theoretical physics and software to solve complex engin
 
 ---
 
-## 🌊 CFD Simulations · ANSYS Fluent & Star-CCM+
-
-> Industrial-grade computational fluid dynamics projects (NEM 358), cross-validated between two commercial solvers and analytical correlations.
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-#### ⚛️ [CFD Simulation of a 3×3 PWR Rod Bundle](https://github.com/EmreSakarya/pwr-rod-bundle-cfd)
-`ANSYS Fluent` `Star-CCM+` `Conjugate Heat Transfer` `k-ω SST`
-
-Full conjugate heat transfer simulation of a 3×3 PWR fuel rod bundle. Applied a **non-uniform radial power distribution** (up to 2.51×10⁸ W/m³) and cross-validated ANSYS Fluent (1/4-symmetry) against Star-CCM+ (full geometry) and analytical correlations (Petukhov, Dittus-Boelter).
-
-</td>
-<td width="50%" valign="top">
-
-#### 💧 [Flow Analysis in a PWR Fuel Rod Subchannel](https://github.com/EmreSakarya/pwr-subchannel-flow-cfd)
-`ANSYS Fluent` `Star-CCM+` `RANS` `k-ε` `k-ω SST`
-
-Turbulent coolant flow in a 3.66 m bare-rod subchannel (D_h = 11.78 mm). Two independent CFD codes converged to within **~1%** of each other and of the Darcy-Weisbach / Filonenko analytical reference.
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-#### 🔥 [Steady-State Heat Conduction in a TRISO Particle](https://github.com/EmreSakarya/triso-heat-conduction-cfd)
-`Star-CCM+` `Spherical Conduction` `Mesh Independence`
-
-3D Star-CCM+ model of a 5-layer TRISO fuel particle (2 GW/m³ source) validated against a 1D analytical solution (T_max = **1106.35 K**). Mesh error < **0.0084%** across all refinement levels.
-
-</td>
-<td width="50%" valign="top">
-
-#### 🌀 [Single-Phase CFD of a VVER-1200 Rod Bundle](https://github.com/EmreSakarya/vver-1200-rod-bundle-cfd)
-`Star-CCM+` `Conjugate Heat Transfer` `SST k-ω γ-Reθ` `Hexagonal Bundle`
-
-Conjugate heat transfer simulation of a 19-rod (18 fuel + guide tube) **VVER-1200** hexagonal mini-bundle over the bottom 1/10 of the core with a sinusoidal axial power source (~1.8M cells). CFD matched analytical references to **0.18%** on peak fuel temperature, **1.9%** on coolant ΔT, and **8.1%** on pressure drop.
-
-</td>
-</tr>
-</table>
-
----
-
 ## 🔬 Numerical Methods & Heat Transfer · Python / Fortran
 
 > Solvers built from scratch for non-linear, stiff, and multi-physics heat-transfer problems.
@@ -148,7 +103,14 @@ Point reactor kinetics with delayed neutrons under reactivity insertions. Implem
 From-scratch two-group neutron diffusion solver for the 3-D IAEA PWR core benchmark (ANL-7416). Mesh-centered FDM with harmonic-mean interface coefficients, Robin vacuum BCs, and power iteration + red-black SOR. Reproduces the reference **k_eff = 1.02903** to within **−7.9 pcm** and matches the 1977 VENTURE mesh-convergence sequence.
 
 </td>
-<td width="50%" valign="top"></td>
+<td width="50%" valign="top">
+
+#### ⚛️ [C5G7 · 2-D 7-Group Neutron Transport Benchmark (S<sub>N</sub>)](https://github.com/EmreSakarya/c5g7-2d-transport-benchmark)
+`Fortran` `OpenMP` `Discrete Ordinates (S_N)` `7-Group Transport` `Eigenvalue`
+
+From-scratch discrete-ordinates (S<sub>N</sub>) neutron **transport** solver for the OECD/NEA **C5G7 MOX** benchmark — heterogeneous pin-by-pin UO₂ + MOX geometry with **no spatial homogenisation**. Product angular quadrature, diamond-difference sweep, volume-preserving "digital-disk" pin discretisation, reflective/vacuum BCs, power iteration with OpenMP. Reproduces the MCNP reference **k_eff = 1.18655** to within **−182 pcm**; max/min pin powers match to ~6%.
+
+</td>
 </tr>
 </table>
 
@@ -172,6 +134,51 @@ Stochastic neutron-trajectory algorithm from scratch in slab geometry. Validated
 `Bethe-Bloch Formula` `Adaptive Integration`
 
 Energy deposition of protons and alpha particles in water / hydrogen media. Simulated **phase-transition effects** on stopping power using adaptive numerical integration.
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🌊 CFD Simulations · ANSYS Fluent & Star-CCM+
+
+> Industrial-grade computational fluid dynamics projects (NEM 358), cross-validated between two commercial solvers and analytical correlations.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+#### ⚛️ [CFD Simulation of a 3×3 PWR Rod Bundle](https://github.com/EmreSakarya/pwr-rod-bundle-cfd)
+`ANSYS Fluent` `Star-CCM+` `Conjugate Heat Transfer` `k-ω SST`
+
+Full conjugate heat transfer simulation of a 3×3 PWR fuel rod bundle. Applied a **non-uniform radial power distribution** (up to 2.51×10⁸ W/m³) and cross-validated ANSYS Fluent (1/4-symmetry) against Star-CCM+ (full geometry) and analytical correlations (Petukhov, Dittus-Boelter).
+
+</td>
+<td width="50%" valign="top">
+
+#### 💧 [Flow Analysis in a PWR Fuel Rod Subchannel](https://github.com/EmreSakarya/pwr-subchannel-flow-cfd)
+`ANSYS Fluent` `Star-CCM+` `RANS` `k-ε` `k-ω SST`
+
+Turbulent coolant flow in a 3.66 m bare-rod subchannel (D_h = 11.78 mm). Two independent CFD codes converged to within **~1%** of each other and of the Darcy-Weisbach / Filonenko analytical reference.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+#### 🔥 [Steady-State Heat Conduction in a TRISO Particle](https://github.com/EmreSakarya/triso-heat-conduction-cfd)
+`Star-CCM+` `Spherical Conduction` `Mesh Independence`
+
+3D Star-CCM+ model of a 5-layer TRISO fuel particle (2 GW/m³ source) validated against a 1D analytical solution (T_max = **1106.35 K**). Mesh error < **0.0084%** across all refinement levels.
+
+</td>
+<td width="50%" valign="top">
+
+#### 🌀 [Single-Phase CFD of a VVER-1200 Rod Bundle](https://github.com/EmreSakarya/vver-1200-rod-bundle-cfd)
+`Star-CCM+` `Conjugate Heat Transfer` `SST k-ω γ-Reθ` `Hexagonal Bundle`
+
+Conjugate heat transfer simulation of a 19-rod (18 fuel + guide tube) **VVER-1200** hexagonal mini-bundle over the bottom 1/10 of the core with a sinusoidal axial power source (~1.8M cells). CFD matched analytical references to **0.18%** on peak fuel temperature, **1.9%** on coolant ΔT, and **8.1%** on pressure drop.
 
 </td>
 </tr>
