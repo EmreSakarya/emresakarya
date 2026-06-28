@@ -61,6 +61,24 @@ I bridge the gap between theoretical physics and software to solve complex engin
 <tr>
 <td width="50%" valign="top">
 
+#### ⚛️ [IAEA-3D PWR Benchmark · Neutron Diffusion Solver](https://github.com/EmreSakarya/iaea-3d-pwr-benchmark)
+`Fortran` `OpenMP` `Finite Difference` `Eigenvalue` `Red-Black SOR`
+
+From-scratch two-group neutron diffusion solver for the 3-D IAEA PWR core benchmark (ANL-7416). Mesh-centered FDM with harmonic-mean interface coefficients, Robin vacuum BCs, and power iteration + red-black SOR. Reproduces the reference **k_eff = 1.02903** to within **−7.9 pcm** and matches the 1977 VENTURE mesh-convergence sequence.
+
+</td>
+<td width="50%" valign="top">
+
+#### ⚛️ [C5G7 · 2-D 7-Group Neutron Transport Benchmark (S<sub>N</sub>)](https://github.com/EmreSakarya/c5g7-2d-transport-benchmark)
+`Fortran` `OpenMP` `Discrete Ordinates (S_N)` `7-Group Transport` `Eigenvalue`
+
+From-scratch discrete-ordinates (S<sub>N</sub>) neutron **transport** solver for the OECD/NEA **C5G7 MOX** benchmark — heterogeneous pin-by-pin UO₂ + MOX geometry with **no spatial homogenisation**. Product angular quadrature, diamond-difference sweep, volume-preserving "digital-disk" pin discretisation, reflective/vacuum BCs, power iteration with OpenMP. Reproduces the MCNP reference **k_eff = 1.18655** to within **−182 pcm**; max/min pin powers match to ~6%.
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 #### 🌡️ [2D Transient Thermal Analysis of a Rectangular Plate](https://github.com/EmreSakarya/2d-transient-thermal-analysis)
 `Python` `Control Volume FDM` `Explicit Euler` `Natural Convection`
 
@@ -91,24 +109,6 @@ Point reactor kinetics with delayed neutrons under reactivity insertions. Implem
 `Fortran 90` `Implicit Euler` `Stiff ODEs`
 
 14-stage decay chain (U-238 → Pb-206) with half-lives spanning 10⁹ years to seconds — a severely **stiff system**. Generic Implicit Euler solver in Fortran, mirroring legacy HPC nuclear-code logic.
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-#### ⚛️ [IAEA-3D PWR Benchmark · Neutron Diffusion Solver](https://github.com/EmreSakarya/iaea-3d-pwr-benchmark)
-`Fortran` `OpenMP` `Finite Difference` `Eigenvalue` `Red-Black SOR`
-
-From-scratch two-group neutron diffusion solver for the 3-D IAEA PWR core benchmark (ANL-7416). Mesh-centered FDM with harmonic-mean interface coefficients, Robin vacuum BCs, and power iteration + red-black SOR. Reproduces the reference **k_eff = 1.02903** to within **−7.9 pcm** and matches the 1977 VENTURE mesh-convergence sequence.
-
-</td>
-<td width="50%" valign="top">
-
-#### ⚛️ [C5G7 · 2-D 7-Group Neutron Transport Benchmark (S<sub>N</sub>)](https://github.com/EmreSakarya/c5g7-2d-transport-benchmark)
-`Fortran` `OpenMP` `Discrete Ordinates (S_N)` `7-Group Transport` `Eigenvalue`
-
-From-scratch discrete-ordinates (S<sub>N</sub>) neutron **transport** solver for the OECD/NEA **C5G7 MOX** benchmark — heterogeneous pin-by-pin UO₂ + MOX geometry with **no spatial homogenisation**. Product angular quadrature, diamond-difference sweep, volume-preserving "digital-disk" pin discretisation, reflective/vacuum BCs, power iteration with OpenMP. Reproduces the MCNP reference **k_eff = 1.18655** to within **−182 pcm**; max/min pin powers match to ~6%.
 
 </td>
 </tr>
