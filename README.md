@@ -112,6 +112,17 @@ Point reactor kinetics with delayed neutrons under reactivity insertions. Implem
 
 </td>
 </tr>
+<tr>
+<td width="50%" valign="top">
+
+#### ☢️ [CAREM-25 End-of-Cycle Activity (KORIGEN)](https://github.com/EmreSakarya/carem-25-korigen-activity)
+`KORIGEN` `Depletion & Decay` `Source Term` `Accident-Tolerant Fuel`
+
+End-of-cycle radionuclide inventory of the CAREM-25 SMR from the VVER-1000 KORIGEN deck adapted to CAREM geometry (6588 rods, 26.04 MW/tHM, 24 MWd/kg). Core total **2.12 × 10¹⁹ Bq**, plus five variations: low burnup, 20 w/o enrichment, Th-232, U₃Si₂ fuel and FeCrAl cladding.
+
+</td>
+<td width="50%" valign="top"></td>
+</tr>
 </table>
 
 ---
