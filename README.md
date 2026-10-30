@@ -121,7 +121,14 @@ Point reactor kinetics with delayed neutrons under reactivity insertions. Implem
 End-of-cycle radionuclide inventory of the CAREM-25 SMR from the VVER-1000 KORIGEN deck adapted to CAREM geometry (6588 rods, 26.04 MW/tHM, 24 MWd/kg). Core total **2.12 × 10¹⁹ Bq**, plus five variations: low burnup, 20 w/o enrichment, Th-232, U₃Si₂ fuel and FeCrAl cladding.
 
 </td>
-<td width="50%" valign="top"></td>
+<td width="50%" valign="top">
+
+#### ⚛️ [C5G7 · 2-D 7-Group Neutron Transport Benchmark (S<sub>N</sub>)](https://github.com/EmreSakarya/c5g7-2d-transport-benchmark)
+`Fortran` `OpenMP` `Discrete Ordinates (S_N)` `7-Group Transport` `Eigenvalue`
+
+From-scratch discrete-ordinates (S<sub>N</sub>) neutron **transport** solver for the OECD/NEA **C5G7 MOX** benchmark — heterogeneous pin-by-pin UO₂ + MOX geometry with **no spatial homogenisation**. Product angular quadrature, diamond-difference sweep, volume-preserving "digital-disk" pin discretisation, reflective/vacuum BCs, power iteration with OpenMP. Reproduces the MCNP reference **k_eff = 1.18655** to within **−182 pcm**; max/min pin powers match to ~6%.
+
+</td>
 </tr>
 </table>
 
