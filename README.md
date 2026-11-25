@@ -44,7 +44,6 @@ Since v12 the scope is neutronics only: depletion and thermal-hydraulics were re
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) Advanced\
 ![Fortran](https://img.shields.io/badge/Fortran-734F96?style=flat&logo=fortran&logoColor=white) Intel ifx / gfortran\
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white) Intermediate\
 ![C](https://img.shields.io/badge/C-A8B9CC?style=flat&logo=c&logoColor=black) Intermediate
 
 </td>
